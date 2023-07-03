@@ -538,6 +538,10 @@ bool OBSEPlugin_Load(const OBSEInterface * obse)
 
 	// get command table, if needed
 	OBSECommandTableInterface* cmdIntfc = (OBSECommandTableInterface*)obse->QueryInterface(kInterface_CommandTable);
+
+	// !*!*! THIS LINE CAUSES CTD ON NEW GAME
+	cmdIntfc->Replace(0x1430, &kCommandInfo_ExamplePlugin_MakeArray);
+	
 	if (cmdIntfc) {
 #if 0	// enable the following for loads of log output
 		for (const CommandInfo* cur = cmdIntfc->Start(); cur != cmdIntfc->End(); ++cur) {
