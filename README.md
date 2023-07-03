@@ -159,3 +159,4 @@ Thanks to *EchoEclipseWolf* for decoding bits
 Thanks to all people who reported bugs.
 
 A special thanks to *ianpatt* that allowed us to mantain this fork.
+"# PG_OBSEPlugin" 
